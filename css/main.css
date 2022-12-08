@@ -1,0 +1,103 @@
+/* .wrapper > .box {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+.box1 ~ .box {
+  width: 100px;
+  height: 100px;
+  background-color: aqua;
+}
+.dada > div {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  margin-bottom: 10px;
+}
+.akam ~ .singlim {
+  width: 100px;
+  height: 100px;
+  background-color: black;
+}
+.akam > .bolalari {
+  width: 50px;
+  height: 50px;
+  background-color: aqua;
+}
+.bolalari ~ .jiyan {
+  width: 20px;
+  height: 20px;
+  background-color: blue;
+}
+
+.akam + .men + .ukam {
+  background-color: brown;
+} */
+label::before {
+  content: "";
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 15px;
+  height: 15px;
+  border: 1px solid black;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+.field input[type="checkbox"]:checked + label::before {
+  content: "✔️";
+}
+.field label {
+  cursor: pointer;
+}
+.field label {
+  cursor: pointer;
+}
+
+.field .radio-label {
+  position: relative;
+}
+
+.field .radio-label::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 9px;
+  height: 9px;
+  background-color: red;
+  border-radius: 50%;
+  top: 6px;
+  left: 4px;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.field .radio-label::before {
+  content: "";
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 15px;
+  height: 15px;
+  border: 1px solid black;
+  vertical-align: middle;
+  margin-right: 5px;
+  border-radius: 50%;
+}
+
+.field input[type="radio"]:checked + .radio-label::after {
+  opacity: 0.8;
+}
